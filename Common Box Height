@@ -1,0 +1,10 @@
+var heights = $(".callout-box--standard").map(function ()
+    {
+        return $(this).height();
+    }).get();
+
+maxHeight = Math.max.apply(null, heights);
+function changeHeight() {
+    $(".callout-box--standard").css("height", maxHeight);
+}
+changeHeight();
