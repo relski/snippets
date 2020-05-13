@@ -1,0 +1,58 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+ 
+  $(".reset").click(function() {
+    $('#wsite-content .paragraph').each(function () {
+		this.style.setProperty( 'font-size', '18px', 'important' );
+	});
+  });
+
+  $(".increase").click(function() {
+    $('#wsite-content .paragraph').each(function () {
+		this.style.setProperty( 'font-size', '30px', 'important' );
+	});
+  });
+
+  $(".decrease").click(function() {
+    $('#wsite-content .paragraph').each(function () {
+		this.style.setProperty( 'font-size', '10px', 'important' );
+	});
+  });
+</script>
+
+<style>
+.buttons {
+    font-size: 25px;
+    display: block;
+    font-weight: bold;
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    padding: 5px 10px;
+    border: 3px solid #00529e;
+    border-bottom: none;
+    border-radius: 15px 15px 0px 0px;
+}
+
+@media screen and (max-width: 992px) {
+	.buttons {
+		right: 200px;
+	}
+}
+
+.buttons a {
+  color: #E9967A !important;
+}
+
+a:hover {
+  color:#B22222;
+  cursor: pointer;
+}
+</style>
+<span class="buttons">
+  <a class="increase">+</a> |
+  <a class="decrease">-</a> |
+  <a class="reset">reset</a>
+</span>
