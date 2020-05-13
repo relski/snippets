@@ -1,0 +1,17 @@
+var loc = window.location.href; //gets current url
+var anchorTag = loc.split('#').pop(); //gets the anchor from the url
+var elem = document.querySelectorAll("#" + anchorTag); // gets nodelist with the anchor
+var target = elem[0].parentNode.closest('.accordion__item'); // selects the parent from the array
+target.className += ' active'; // adds the active class to the DOM element
+
+// function for fixing the anchor jump
+function jumpAnchor() {
+    var elemY = target.offsetTop - 80;
+    window.scrollTo(0, elemY);
+}
+// init after loading the page
+window.onload = function() {
+    setTimeout(function() {
+        jumpAnchor();
+    }, 500);
+}
