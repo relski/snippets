@@ -1,4 +1,3 @@
-
 <style type="text/css">
 .overlay {
 	position: fixed;
@@ -14,8 +13,7 @@
 	z-index: 100;
 	display: block;
 }
-
-.popup a{
+.popup a.close {
 	text-decoration: none;
 	font-weight: 700;
     font-size: 25px;
@@ -25,7 +23,6 @@
     padding: 10px 20px;
     color: #aa0722!important;
 }
-
 .pop_container{
 	width: 100%;
 	margin: 0 auto;
@@ -36,15 +33,14 @@
 	position: fixed;
 	z-index: 101;
 }
-
 .popup{
-    width: 900px;
+    width: auto;
     min-height: 150px;
     margin: 50px auto;
     background: #fff;
     position: relative;
     z-index: 103;
-    padding: 5px;
+    padding: 5px 40px;
     border-radius: 5px;
     box-shadow: 0 2px 5px #000;
     text-align: center;
@@ -53,12 +49,12 @@
 	position: relative;
 }
 .popup a img{
-    width: 80%;
+    width: auto;
     padding-top: 35px;
 	display: block;
 	margin: 0 auto;
+	max-height: 80vh;
 }
-
 @media (max-width:480px){
 	.popup {
 	width: 80% !important;
@@ -67,11 +63,9 @@
     padding: 10px;
 	}
 }
-
 .popup p{
-clear: both;
+	clear: both;
     color: #555555;
-    /* text-align: justify; */
     font-size: 20px;
     font-family: sans-serif;
 }
@@ -87,7 +81,6 @@ clear: both;
 	top: -25px;
 	width: 34px;
 }
-
 .popup a:hover{
 	cursor: pointer;
 }
@@ -114,7 +107,7 @@ if(sessionStorage.getItem('popNow') !== 'true') {
 <div class='pop_container'>
 <div class='popup'>
 <!-- Insert Content Below -->
-<a class="imglink" href=""><img src="/files/theme/happydog.jpg"></a>
+<a class="imglink" href=""><img src="/files/theme/flyer.jpg"></a>
 
 <!-- end of content -->
 <a onclick='popClose()' class='close'>&#10005;</a>
